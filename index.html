@@ -3,8 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Wedding Maps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <h1>Welcome to a Festive Event</h1>
+
+    <!-- Background -->
+    <div class="background-image">
+        <img src="assets/background.jpg" alt="Wedding background">
+    </div>
+
+    <!-- Particles -->
+    <div class="particles"></div>
+
+    <!-- Page content -->
+    <main class="page">
+        <div class="content-position">
+
+            <h1><i>Λούκας & Μαρίκα</i></h1>
+            <p class = "gratitude">
+                Είμαστε ιδιαίτερα χαρούμενοι που επιθυμείτε να παρευρεθείτε στην τελετουργική προετοιμασία, αλλιώς "Αλλάματα", της νύφης και του γαμπρού. 'Οπου ευχώμαστε αυτή την ξεχωριστή ημέρα, όλοι μαζί να μοιραστούμε στιγμές αγάπης, χαράς και αύθονου γέλιου.
+            </p>
+
+            <img src="assets/divider.png" alt="Divider">
+
+            <p class="gratitude">
+                Για τη δική σας διευκόλυνση, παρέχεται η δυνατότητα επιλογής της τοποθεσίας που επιθυμείτε να επισκεφθείτε για την τελετουργική προετοιμασία είτε της νύφης ή του γαμπρού.
+            </p>
+
+            <div class="locations">
+                <a class="location-button"
+                   href="https://www.google.com/maps?q=34.845029,33.572382"
+                   target="_blank"
+                   rel="noopener"
+                   style="background-image: url('assets/dressicon.jpg');">
+                    <span class="location-text">Bride’s Location</span>
+                </a>
+
+                <a class="location-button"
+                   href="https://www.google.com/maps?q=34.835327,33.580333"
+                   target="_blank"
+                   rel="noopener"
+                   style="background-image: url('assets/suiticon.jpg');">
+                    <span class="location-text">Groom’s Location</span>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+
 </body>
 </html>

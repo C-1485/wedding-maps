@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: "Sofia", sans-serif;
+    overflow: hidden; /* no scrolling */
+}
+
+/* Soft overlay */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+
+/* ---- */
+
+.background-image {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.95) blur(1px);
+    transform: scale(1.15);
+}
+
+
+/* ---- */
+
+.particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle.wasabigreen { --particle-color: 218,165,32; }
+.particle.groundginger { --particle-color: 214,201,157; }
+
+.particle {
+    position: absolute;
+    bottom: -10vh;
+    border-radius: 50%;
+    animation: ParticleFloat linear infinite;
+}
+
+.particle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle,
+        rgba(var(--particle-color), 0.8) 30%,
+        rgba(var(--particle-color), 0.4) 35%,
+        rgba(var(--particle-color), 0) 40%
+    );
+    animation: ParticlePulse 4s ease-in-out infinite;
+}
+
+@keyframes ParticleFloat {
+    from { transform: translateY(0); opacity: 1; }
+    to   { transform: translateY(-120vh); opacity: 0; }
+}
+
+@keyframes ParticlePulse {
+    0%, 100% { transform: scale(0.6); }
+    50%      { transform: scale(1.4); }
+}
+
+
+/* ---- */
+
+.page {
+    position: relative;
+    z-index: 0;
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+}
+
+.content-position {
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/* ---- */
+
+h1 {
+    font-family: 'Sofia', cursive;
+    font-size: clamp(2rem, 4vw, 2rem);
+    margin: 0.25rem 0;
+    color: rgb(169,170,112);
+    text-shadow: 2px 4px 6px rgba(0,0,0,0.35);
+    text-align: center;
+}
+
+.gratitude {
+    font-family: 'Sofia', cursive;
+    font-size: clamp(1rem, 2vw, 1rem);
+    margin: 0.50rem 0;
+    color: rgb(169,170,112);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.35);
+    text-align: center;
+}
+
+.content-position img {
+    max-width: 220px;
+    height: auto;
+}
+
+
+/* ---- */
+
+.locations {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.location-button {
+    flex: 1 1 0;
+    max-width: 45vw;
+    height: min(28vh, 180px);
+
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    text-decoration: none;
+    color: white;
+
+    box-shadow:
+    0 0 5px rgba(214, 201, 157, 0.9),
+    0 0 10px rgba(214, 201, 157, 0.6);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.location-button:hover {
+    transform: translateY(-4px);
+    box-shadow:
+    0 0 5px rgba(255, 215, 0, 0.5),
+    0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.location-text {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
