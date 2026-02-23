@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    font-family: "Snell Roundhand", "Brush Script MT", cursive;
+    font-family: "Noto Serif", "Noto Serif Greek", "Georgia", "Times New Roman", serif;
     overflow-x: hidden; /* no scrolling */
     background-color: #d7d6d2;
 }
@@ -109,7 +109,7 @@ body::before {
 /* ---- */
 
 h1 {
-    font-family: "Snell Roundhand", "Brush Script MT", cursive;
+    font-family: "Noto Serif", "Noto Serif Greek", "Georgia", "Times New Roman", serif;
     font-size: clamp(2rem, 4vw, 2rem);
     margin: 0.25rem 0;
     color: #adad7c;
@@ -118,7 +118,7 @@ h1 {
 }
 
 .gratitude {
-    font-family: "Snell Roundhand", "Brush Script MT", cursive;
+    font-family: "Noto Serif", "Noto Serif Greek", "Georgia", "Times New Roman", serif;
     font-size: clamp(1rem, 2vw, 1rem);
     margin: 0.50rem 0;
     color: #adad7c;
